@@ -1,6 +1,6 @@
 
-module.exports = () => {
-  const customerWalletsDB = require('../data/customerWallets.json');
+module.exports = app => {
+  const customerWalletsDB = app.data.customerWallets;
   const controller = {};
 
   controller.listCustomerWallets = (req, res) => res.status(200).json(customerWalletsDB);

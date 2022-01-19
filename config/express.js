@@ -11,5 +11,8 @@ module.exports = () => {
   // MIDDLEWARES
   app.use(bodyParser.json());
 
+  // ROTA
+  require('../api/routes/customerWallets')(app);
+
   return app;
 };
